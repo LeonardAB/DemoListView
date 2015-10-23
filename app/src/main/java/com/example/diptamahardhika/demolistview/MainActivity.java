@@ -51,30 +51,30 @@ public class MainActivity extends AppCompatActivity {
 
     private void populateListView() {
         // Create list of items
-       Lema satu = new Lema("blue", "biru", "laut");
-       Lema dua = new Lema("red", "merah", "darah");
-       Lema tiga = new Lema("green", "hijau", "daun");
+        Lema satu = new Lema("blue", "biru", "laut");
+        Lema dua = new Lema("red", "merah", "darah");
+        Lema tiga = new Lema("green", "hijau", "daun");
         Lema empat = new Lema("green1", "hijau", "daun");
         Lema lima = new Lema("green2", "hijau", "daun");
         Lema enam = new Lema("green3", "hijau", "daun");
 
 
         //build adapter
-       List<Lema> data = new ArrayList<>();
+        List<Lema> data = new ArrayList<>();
 
 
         data.add(satu);
         data.add(dua);
-       data.add(tiga);
+        data.add(tiga);
         data.add(empat);
         data.add(lima);
         data.add(enam);
 
 
         //configure list view
-      //  ListView list = (ListView) findViewById(R.id.dictList);
+        //  ListView list = (ListView) findViewById(R.id.dictList);
         recyclerView = (RecyclerView) findViewById(R.id.dictList);
-        adapter = new LemaAdapter(this,data);
+        adapter = new LemaAdapter(this, data);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
